@@ -1,0 +1,44 @@
+/* #F06B86 #A28EBE #77C29F #F0D577 #F28061*/
+body {
+  transition: background-color 1s ease;
+  overflow: hidden;
+}
+
+.container {
+  display: block;
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto;
+  background-color: #F06B86;
+  transition: background-color 1s ease;
+  font-family: 'Gafata';
+}
+
+.block {
+  height: 100vh;
+}
+
+.pink {
+  background-color: #F06B86;
+}
+
+.purple {
+  background-color: #A28EBE;
+}
+
+.green {
+  background-color: #77C29F;
+}
+
+.yellow {
+  background-color: #F0D577;
+}
+
+.orange {
+  background-color: #F28061;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Reenie Beanie' !important;
+  text-align: center;
+}

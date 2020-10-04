@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+@font-face {
+  font-family: 'Reenie Beanie';
+  src: url(./assets/fonts/ReenieBeanie-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Gafata';
+  src: url(./assets/fonts/Gafata-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Advent Pro';
+  src: url(./assets/fonts/AdventPro-Regular.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Advent Pro';
+  src: url(./assets/fonts/AdventPro-Medium.ttf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Advent Pro';
+  src: url(./assets/fonts/AdventPro-Light.ttf);
+  font-weight: 300;
+}

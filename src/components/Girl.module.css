@@ -1,0 +1,15 @@
+.armWave {
+    animation-duration: 3s;
+    animation-name: wave;
+    animation-iteration-count: infinite;
+}
+
+@keyframes wave {
+    from {
+        transform: rotate(-2, 66.5, 144);
+    }
+
+    to {
+        transform: rotate(57, 66.5, 144);
+    }
+}
