@@ -17,18 +17,10 @@ import DirectionsBikeIcon from '@material-ui/icons/DirectionsBike';
 import CodeIcon from '@material-ui/icons/Code';
 import DirectionsRunIcon from '@material-ui/icons/DirectionsRun';
 import CropOriginalIcon from '@material-ui/icons/CropOriginal';
+import HighlightIcon from '@material-ui/icons/Highlight';
 
 const blocks = props => {
-
     let colorKeys = Object.keys(props.colors);
-
-    const blocks = colorKeys.slice(4).map(color => (
-        <Container maxWidth="sm" className="block-wrapper" key={color} data-key={color}>
-            <Typography variant="h4">
-            Camila Espinoza
-            </Typography>
-        </Container>
-    ));
 
     return (
         <Fragment>
@@ -36,7 +28,7 @@ const blocks = props => {
             <SecondBlock {...props} color={colorKeys[1]} />
             <ThirdBlock {...props} color={colorKeys[2]} />
             <FourthBlock {...props} color={colorKeys[3]} />
-            {blocks}
+            <FifthBlock {...props} color={colorKeys[4]} />
         </Fragment>
     );
 }
@@ -205,7 +197,21 @@ const FourthBlock = props => {
                     {listItem(<CodeIcon />, "Frontend technologies")}
                     {listItem(<DirectionsRunIcon />, "Animations")}
                     {listItem(<CropOriginalIcon />, "SVG for interectivity")}
+                    {listItem(<HighlightIcon />, "Learning & creating new stuff!")}
                 </List>
+            </Box>
+        </Container>
+    )
+}
+
+const FifthBlock = props => {
+    return (
+        <Container maxWidth="sm" className="block-wrapper" key={props.color} data-key={props.color}>
+            <Box style={{ color: props.colors.darkBlue }}>
+                <Typography variant="h3">Thanks for reading!</Typography>
+            </Box>
+            <Box>
+                
             </Box>
         </Container>
     )
