@@ -9,9 +9,9 @@ body {
   width: 100%;
   height: 100vh;
   overflow-y: auto;
-  background-color: #F06B86;
+  background-color: #fff;
   transition: background-color 1s ease;
-  font-family: 'Gafata';
+  font-family: 'Advent Pro';
 }
 
 .block {
@@ -38,7 +38,11 @@ body {
   background-color: #F28061;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4 {
   font-family: 'Reenie Beanie' !important;
   text-align: center;
+}
+
+h5, h6, p {
+  font-family: 'Advent Pro' !important;
 }
