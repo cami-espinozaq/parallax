@@ -19,6 +19,7 @@ import CodeIcon from '@material-ui/icons/Code';
 import DirectionsRunIcon from '@material-ui/icons/DirectionsRun';
 import CropOriginalIcon from '@material-ui/icons/CropOriginal';
 import HighlightIcon from '@material-ui/icons/Highlight';
+import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 
 const blocks = props => {
     let colorKeys = Object.keys(props.colors);
@@ -57,6 +58,9 @@ const FirstBlock = props => {
                 <Typography variant="h4">Software Developer</Typography>
             </Box>
             <Girl />
+            <Box style={{ position: 'absolute', bottom: '30px', right: '20px' }}>
+                <ArrowDownwardIcon className="arrow-down" style={{ color: props.colors.turquoise }} />
+            </Box>
         </BlockWrapper>
     );
 }
@@ -91,7 +95,7 @@ const SecondBlock = props => {
 }
 
 const ThirdBlock = props => {
-    const [expanded, setExpanded] = useState('panel0');
+    const [expanded, setExpanded] = useState(false);
 
     const handleChange = (panel) => (event, isExpanded) => {
         setExpanded(isExpanded ? panel : false);
@@ -99,8 +103,8 @@ const ThirdBlock = props => {
 
     return (
         <BlockWrapper {...props} classes="block-wrapper--centered">
-            <Box style={{ color: props.colors.turquoise, marginBottom: '20%' }}>
-                <Typography variant="h3">Work Experience</Typography>
+            <Box style={{ color: props.colors.darkBlue, marginBottom: '20%' }}>
+                <Typography variant="h3">Experience</Typography>
             </Box>
             <Box>
                 <AccordionBlock
@@ -110,27 +114,27 @@ const ThirdBlock = props => {
                     expanded={expanded}
                     changeEvent={handleChange}>
                     <Typography>
-                        Frontend developer for the company's product, building and improving features on its application layer. Use of javascript and Elm for client side, python for server side with Flask as web framework.
+                        Frontend developer for the company's suite, building and improving features on its application layer. Use of Javascript and Elm for client-side, Python for server-side with Flask as web framework.
                     </Typography>
                 </AccordionBlock>
                 <AccordionBlock
                     panel="panel1"
-                    title="Catholic University of Chile, Public Policies Center"
-                    subtitle="BPMN Specialist"
-                    expanded={expanded}
-                    changeEvent={handleChange}>
-                    <Typography>
-                        Worked as part of the Chilean government “DOM Online” project, analyzing Chilean townships’ construction management. Modeling of internal and external processes, using BPMN notation, based on current legal regulation and interviews at several Townships.
-                    </Typography>
-                </AccordionBlock>
-                <AccordionBlock
-                    panel="panel2"
                     title="Microsoft Corporation"
                     subtitle="CSP Sales Expert"
                     expanded={expanded}
                     changeEvent={handleChange}>
                     <Typography>
-                        Worked with Microsoft’s Chilean telco partners, supporting Office 365 and Azure sales. It included pre-sales technical support, software configuration and migration supervision.
+                        Coordinated with Microsoft’s Chilean telco partners, supporting Office 365 and Azure sales. This included pre-sales technical support, software configuration and migration supervision.
+                    </Typography>
+                </AccordionBlock>
+                <AccordionBlock
+                    panel="panel2"
+                    title="Catholic University of Chile, Public Policies Center"
+                    subtitle="BPMN Specialist"
+                    expanded={expanded}
+                    changeEvent={handleChange}>
+                    <Typography>
+                        Worked on the Chilean government's “DOM Online” project, analysing Chilean townships’ construction management. This involved the modeling of internal and external processes as well as using BPMN notation based on legal regulation and interviews at several townships.
                     </Typography>
                 </AccordionBlock>
                 <AccordionBlock
@@ -140,7 +144,7 @@ const ThirdBlock = props => {
                     expanded={expanded}
                     changeEvent={handleChange}>
                     <Typography>
-                        Investigation and presentation of new information technologies based on Big Data Analytics, in order to find new revenue opportunities for Communication Service Providers.
+                        In this role I researched and presented information technologies based on Big Data Analytics in order to find new revenue opportunities for Communication Service Providers.
                     </Typography>
                 </AccordionBlock>
                 <AccordionBlock
@@ -151,12 +155,10 @@ const ThirdBlock = props => {
                     changeEvent={handleChange}>
                     <ul style={{ marginTop: 0 }}>
                         <li>
-                            <Typography><strong>RSolver Software company:</strong>
-                            Designing and coding of an inventory control application for a mining supplier company. Use of C# with WPF interface, ASP.net and mySQL.</Typography>
+                            <Typography><strong>RSolver Software company:</strong> Designed and coded an inventory control application for a mining supplier company. Use of C# with WPF interface, ASP.net and mySQL.</Typography>
                         </li>
                         <li>
-                            <Typography><strong>Supply Chain App for a Graduation Thesis:</strong>
-                            Routing improvement proposal for a service company. Program based on VRP Algorithm. Use of C# with WPF interface.</Typography>
+                            <Typography><strong>Supply Chain App for a Graduation Thesis:</strong> Presented a routing improvement proposal for a service company. Program based on VRP Algorithm. Use of C# with WPF interface.</Typography>
                         </li>
                     </ul>
                 </AccordionBlock>

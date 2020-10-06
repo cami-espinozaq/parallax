@@ -39,6 +39,20 @@
     margin-right: 6px;
 }
 
+.block-wrapper .arrow-down {
+    height: 50px;
+    width: 50px;
+    animation: levitate 1s ease-in-out infinite;
+}
+
+@keyframes levitate { 
+    0% { transform: translateY(-5px); }
+
+    50% { transform: translateY(5px); }
+
+    100% { transform: translateY(-5px); }
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     .block-wrapper .MuiTypography-h3 {
