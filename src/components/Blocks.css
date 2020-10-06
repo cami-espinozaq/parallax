@@ -5,10 +5,21 @@
     justify-content: space-evenly;
     min-height: 100vh;
     height: 100%;
+    transition: opacity 1s ease-in;
 }
 
 .block__list-item {
     font-family: 'Advent Pro';
+}
+
+.block-wrapper.block-wrapper--centered {
+    justify-content: center;
+}
+
+.block-wrapper.block-wrapper--full-screen {
+    padding: 0;
+    justify-content: space-between;
+    max-width: 100%;
 }
 
 .block-wrapper .MuiAccordionSummary-content {

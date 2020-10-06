@@ -1,6 +1,7 @@
 import React, { Fragment, useState } from 'react';
 import '../App.css';
 import Girl from './Girl';
+import Advert from './Advert';
 import { Accordion, AccordionDetails, AccordionSummary, Avatar, Box, Container, Divider, List, ListItem, ListItemAvatar, ListItemIcon, ListItemText, Typography } from '@material-ui/core';
 import  './Blocks.css';
 
@@ -33,15 +34,30 @@ const blocks = props => {
     );
 }
 
+const BlockWrapper = props => {
+    const classes = props.classes ? `block-wrapper ${props.classes}` : 'block-wrapper';
+
+    return (
+        <Container 
+            maxWidth="sm" 
+            className={classes}
+            key={props.color} 
+            data-key={props.color} 
+            style={{ opacity: props.active === props.color ? 1 : 0 }}>
+            {props.children}
+        </Container>
+    )
+};
+
 const FirstBlock = props => {
     return (
-        <Container maxWidth="sm" className="block-wrapper" key={props.color} data-key={props.color}>
+        <BlockWrapper {...props}>
             <Box style={{ color: props.colors.yellow }}>
                 <Typography variant="h3">Camila Espinoza</Typography>
                 <Typography variant="h4">Software Developer</Typography>
             </Box>
             <Girl />
-        </Container>
+        </BlockWrapper>
     );
 }
 
@@ -58,8 +74,8 @@ const SecondBlock = props => {
     }
 
     return (
-        <Container maxWidth="sm" className="block-wrapper" key={props.color} data-key={props.color}>
-            <Box style={{ color: props.colors.darkBlue }}>
+        <BlockWrapper {...props}>
+            <Box style={{ color: props.colors.lightGreen }}>
                 <Typography variant="h3">General Background</Typography>
             </Box>
             <List>
@@ -70,20 +86,19 @@ const SecondBlock = props => {
                 {listItem(<FlightTakeoffIcon />, "Lived a year in Montana, USA, as an exchange student")}
                 {listItem(<MyLocationIcon />, "Currently living in Cologne, Germany")}
             </List>
-        </Container>
+        </BlockWrapper>
     )
 }
 
 const ThirdBlock = props => {
-    const [expanded, setExpanded] = useState(false);
+    const [expanded, setExpanded] = useState('panel0');
 
     const handleChange = (panel) => (event, isExpanded) => {
         setExpanded(isExpanded ? panel : false);
     };
 
     return (
-        <Container maxWidth="sm" className="block-wrapper" key={props.color} data-key={props.color} 
-            style={{ justifyContent: 'center' }}>
+        <BlockWrapper {...props} classes="block-wrapper--centered">
             <Box style={{ color: props.colors.turquoise, marginBottom: '20%' }}>
                 <Typography variant="h3">Work Experience</Typography>
             </Box>
@@ -146,7 +161,7 @@ const ThirdBlock = props => {
                     </ul>
                 </AccordionBlock>
             </Box>
-        </Container>
+        </BlockWrapper>
     );
 }
 
@@ -182,7 +197,7 @@ const FourthBlock = props => {
     }
 
     return (
-        <Container maxWidth="sm" className="block-wrapper" key={props.color} data-key={props.color}>
+        <BlockWrapper {...props}>
             <Box style={{ color: props.colors.darkBlue }}>
                 <Typography variant="h3">Hobbies &amp; Interests</Typography>
             </Box>
@@ -200,20 +215,20 @@ const FourthBlock = props => {
                     {listItem(<HighlightIcon />, "Learning & creating new stuff!")}
                 </List>
             </Box>
-        </Container>
+        </BlockWrapper>
     )
 }
 
 const FifthBlock = props => {
     return (
-        <Container maxWidth="sm" className="block-wrapper" key={props.color} data-key={props.color}>
-            <Box style={{ color: props.colors.darkBlue }}>
+        <BlockWrapper {...props} classes="block-wrapper--full-screen">
+            <Box style={{ color: props.colors.darkBlue, marginTop: '10vh' }}>
                 <Typography variant="h3">Thanks for reading!</Typography>
             </Box>
             <Box>
-                
+                <Advert />
             </Box>
-        </Container>
+        </BlockWrapper>
     )
 }
 

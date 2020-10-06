@@ -1,6 +1,4 @@
-/* import { ReactComponent as Girl } from '../assets/images/monita-opt.svg'; */
 import React, { useState } from 'react';
-import classes from './Girl.module.css';
 import { useSpring, animated as a, config } from 'react-spring';
 
 const Girl = () => {
@@ -74,6 +72,3 @@ const Girl = () => {
 }
 
 export default Girl;
-
-
-/* "rotate(-2,66.5,144)" */

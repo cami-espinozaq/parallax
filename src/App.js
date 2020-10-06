@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import './App.css';
 import { throttle } from 'lodash';
 import Blocks from './components/Blocks';
@@ -14,12 +14,14 @@ export const COLORS = {
 function App() {
 
   const onScroll =  useMemo(() => {
-    const throttled = throttle(e => scrollFn(e), 300);
+    const throttled = throttle(e => scrollFn(e), 350);
     return e => {
       e.persist();
       return throttled(e);
     }
   }, []);
+
+  const [active, setActive] = useState(Object.keys(COLORS)[0]);
 
   useEffect(() => {
     const mainContainer = document.getElementById("main");
@@ -27,7 +29,7 @@ function App() {
   }, []);
   
   const scrollFn = e => {
-    const scroll = e.target.scrollTop + (e.target.offsetHeight / 4);
+    const scroll = e.target.scrollTop + (e.target.offsetHeight / 2.5);
     const blocks = document.querySelectorAll(".block-wrapper");
 
     [...blocks].forEach(b => {
@@ -36,13 +38,14 @@ function App() {
 
       if (b.offsetTop <= scroll && b.offsetTop + b.offsetHeight > scroll) {
         mainContainer.style.backgroundColor = COLORS[color];
+        setActive(color);
       }
     });
   }
   
   return (
     <div className="container" id="main" onScroll={onScroll}>
-      <Blocks colors={COLORS} />
+      <Blocks colors={COLORS} active={active} />
     </div>
   );
 }

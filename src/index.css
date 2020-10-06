@@ -18,11 +18,6 @@ code {
 }
 
 @font-face {
-  font-family: 'Gafata';
-  src: url(./assets/fonts/Gafata-Regular.ttf);
-}
-
-@font-face {
   font-family: 'Advent Pro';
   src: url(./assets/fonts/AdventPro-Regular.ttf);
   font-weight: 400;

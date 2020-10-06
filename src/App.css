@@ -1,6 +1,5 @@
 /* #F06B86 #A28EBE #77C29F #F0D577 #F28061*/
 body {
-  transition: background-color 1s ease;
   overflow: hidden;
 }
 
@@ -10,12 +9,8 @@ body {
   height: 100vh;
   overflow-y: auto;
   background-color: #fff;
-  transition: background-color 1s ease;
+  transition: background-color 1s ease-in-out;
   font-family: 'Advent Pro';
-}
-
-.block {
-  height: 100vh;
 }
 
 .pink {
