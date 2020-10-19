@@ -213,7 +213,7 @@ const FourthBlock = props => {
                 <List>
                     {listItem(<CodeIcon />, "Frontend technologies")}
                     {listItem(<DirectionsRunIcon />, "Animations")}
-                    {listItem(<CropOriginalIcon />, "SVG for interectivity")}
+                    {listItem(<CropOriginalIcon />, "SVG for interactivity")}
                     {listItem(<HighlightIcon />, "Learning & creating new stuff!")}
                 </List>
             </Box>

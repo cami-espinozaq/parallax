@@ -7,7 +7,6 @@ const Advert = () => {
     const breakpoint = 620;
 
     useEffect(() => {
-        console.log(window.innerWidth);
         window.addEventListener('resize', () => setWidth([window.innerWidth, window.innerHeight]));
     }, []);
 

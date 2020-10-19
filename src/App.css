@@ -9,7 +9,7 @@ body {
   height: 100vh;
   overflow-y: auto;
   background-color: #fff;
-  transition: background-color 1s ease-in-out;
+  transition: background-color 300ms ease-in-out;
   font-family: 'Advent Pro';
 }
 

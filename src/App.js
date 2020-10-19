@@ -29,7 +29,7 @@ function App() {
   }, []);
   
   const scrollFn = e => {
-    const scroll = e.target.scrollTop + (e.target.offsetHeight / 2.5);
+    const scroll = e.target.scrollTop + (e.target.offsetHeight / 2);
     const blocks = document.querySelectorAll(".block-wrapper");
 
     [...blocks].forEach(b => {
